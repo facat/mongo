@@ -504,6 +504,7 @@ if windows:
         envDict['MSVC_USE_SCRIPT'] = msvc_script
 
 env = Environment(**envDict)
+env.Append( CPPDEFINES=["USE_EABI_HARDFLOAT"] )
 del envDict
 
 if has_option("cache"):
